@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSphere – Smart Campus Learning & Career Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">🎓 Edu<span>Sphere</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#notes">Notes</a>
+      <a href="#projects">Projects</a>
+      <a href="#hackathons">Hackathons</a>
+      <a href="#placements">Placements</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#events">Events</a>
+      <a href="#career">Career</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-btn" title="Toggle dark/light mode">🌙</button>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- ================= HERO / HOME ================= -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>One Portal. <span class="gradient-text">Entire Campus.</span></h1>
+      <p>Learning resources, digital library, innovation hub, placements, faculty and career guidance — everything a student needs, in one smart platform.</p>
+      <div class="hero-btns">
+        <a href="#dashboard" class="btn btn-primary">Open My Dashboard</a>
+        <a href="#notes" class="btn btn-outline">Browse Notes</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12,400+</strong><small>Study Resources</small></div>
+        <div><strong>350+</strong><small>Student Projects</small></div>
+        <div><strong>92%</strong><small>Placement Rate</small></div>
+        <div><strong>120+</strong><small>Recruiters</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STUDENT DASHBOARD ================= -->
+  <section id="dashboard" class="section">
+    <h2 class="section-title">📊 Student Dashboard</h2>
+    <p class="section-sub">Your learning progress at a glance</p>
+    <div class="dashboard-grid">
+      <div class="card profile-card">
+        <div class="avatar">AS</div>
+        <h3>Aman Sharma</h3>
+        <p class="muted">B.Tech CSE • Semester 5</p>
+        <div class="badges">
+          <span class="badge">⭐ CGPA 8.6</span>
+          <span class="badge">🔥 21-day streak</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Overall Progress</h3>
+        <div class="progress-row"><span>DSA</span><div class="progress"><div class="bar" style="width:78%"></div></div><b>78%</b></div>
+        <div class="progress-row"><span>Web Dev</span><div class="progress"><div class="bar" style="width:64%"></div></div><b>64%</b></div>
+        <div class="progress-row"><span>DBMS</span><div class="progress"><div class="bar" style="width:52%"></div></div><b>52%</b></div>
+        <div class="progress-row"><span>Aptitude</span><div><div class="progress"><div class="bar" style="width:85%"></div></div><b>85%</b></div></div>
+      </div>
+      <div class="card">
+        <h3>This Week</h3>
+        <div class="mini-stats">
+          <div><b>18</b><small>Hours studied</small></div>
+          <div><b>7</b><small>Tests taken</small></div>
+          <div><b>3</b><small>Assignments due</small></div>
+          <div><b>91%</b><small>Attendance</small></div>
+        </div>
+        <div class="notice-line">📌 DBMS unit test on Friday</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOTES / STUDY MATERIAL ================= -->
+  <section id="notes" class="section section-alt">
+    <h2 class="section-title">📚 Notes & Study Material</h2>
+    <p class="section-sub">Search and filter resources by subject or type</p>
+    <div class="filter-bar">
+      <input type="text" id="noteSearch" placeholder="🔎 Search notes, e.g. DSA, DBMS, OS...">
+      <div class="chips" id="noteChips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="Notes">Notes</button>
+        <button class="chip" data-filter="PYQ">PYQs</button>
+        <button class="chip" data-filter="Video">Video</button>
+        <button class="chip" data-filter="Book">E-Book</button>
+      </div>
+    </div>
+    <div class="cards-grid" id="notesGrid"></div>
+  </section>
+
+  <!-- ================= PROJECT SHOWCASE ================= -->
+  <section id="projects" class="section">
+    <h2 class="section-title">🧑‍🎓 Student Project Showcase</h2>
+    <p class="section-sub">Projects built by students across departments</p>
+    <div class="filter-bar">
+      <input type="text" id="projSearch" placeholder="🔎 Search projects, e.g. AI, IoT, App...">
+      <div class="chips" id="projChips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="AI/ML">AI/ML</button>
+        <button class="chip" data-filter="Web">Web</button>
+        <button class="chip" data-filter="IoT">IoT</button>
+        <button class="chip" data-filter="App">App</button>
+      </div>
+    </div>
+    <div class="cards-grid" id="projGrid"></div>
+  </section>
+
+  <!-- ================= HACKATHON / INNOVATION ================= -->
+  <section id="hackathons" class="section section-alt">
+    <h2 class="section-title">🚀 Hackathons & Innovation</h2>
+    <p class="section-sub">Upcoming events and the innovation leaderboard</p>
+    <div class="two-col">
+      <div>
+        <h3 class="sub-title">Upcoming Hackathons</h3>
+        <div class="hack-list">
+          <div class="card hack-card">
+            <span class="tag tag-green">Registration Open</span>
+            <h4>Smart India Hackathon 2026</h4>
+            <p>48-hr national level hackathon. Team of 6. Prize pool ₹10L.</p>
+            <button class="btn btn-small" onclick="registerHackathon('Smart India Hackathon 2026')">Register</button>
+          </div>
+          <div class="card hack-card">
+            <span class="tag tag-blue">Internal Round</span>
+            <h4>EduSphere CodeSprint</h4>
+            <p>12-hour overnight coding sprint on campus. Theme: AI for Education.</p>
+            <button class="btn btn-small" onclick="registerHackathon('EduSphere CodeSprint')">Register</button>
+          </div>
+          <div class="card hack-card">
+            <span class="tag tag-orange">Coming Soon</span>
+            <h4>Ideathon: Campus 2030</h4>
+            <p>Pitch your sustainability idea. Winners get incubation support.</p>
+            <button class="btn btn-small" onclick="registerHackathon('Ideathon Campus 2030')">Register</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="sub-title">🏆 Innovation Leaderboard</h3>
+        <div class="card leaderboard" id="leaderboard"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLACEMENTS ================= -->
+  <section id="placements" class="section">
+    <h2 class="section-title">💼 Placements & Internships</h2>
+    <p class="section-sub">Latest drives, offers and preparation resources</p>
+    <div class="stats-row">
+      <div class="stat-card"><b>92%</b><span>Placement Rate</span></div>
+      <div class="stat-card"><b>₹44 LPA</b><span>Highest Package</span></div>
+      <div class="stat-card"><b>₹6.8 LPA</b><span>Average Package</span></div>
+      <div class="stat-card"><b>120+</b><span>Companies Visited</span></div>
+    </div>
+    <h3 class="sub-title">Open Drives</h3>
+    <div class="cards-grid" id="placementGrid"></div>
+  </section>
+
+  <!-- ================= FACULTY ================= -->
+  <section id="faculty" class="section section-alt">
+    <h2 class="section-title">👨‍🏫 Faculty Profiles</h2>
+    <p class="section-sub">Meet the mentors behind the departments</p>
+    <div class="cards-grid" id="facultyGrid"></div>
+  </section>
+
+  <!-- ================= EVENTS & NOTICES ================= -->
+  <section id="events" class="section">
+    <h2 class="section-title">📅 Events & Notices</h2>
+    <p class="section-sub">What's happening on campus this month</p>
+    <div class="two-col">
+      <div>
+        <h3 class="sub-title">Upcoming Events</h3>
+        <div class="event-list" id="eventList"></div>
+      </div>
+      <div>
+        <h3 class="sub-title">📢 Latest Notices</h3>
+        <div class="card notice-list">
+          <div class="notice-item"><span class="tag tag-red">New</span> Mid-semester exam schedule released — check student portal.</div>
+          <div class="notice-item"><span class="tag tag-blue">Dept</span> CSE department industrial visit to Tech Park on 28 Sept.</div>
+          <div class="notice-item"><span class="tag tag-green">Scholarship</span> Merit scholarship applications open till 30 Sept.</div>
+          <div class="notice-item"><span class="tag tag-orange">Library</span> Digital library now has IEEE access — free on campus WiFi.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAREER ROADMAP ================= -->
+  <section id="career" class="section section-alt">
+    <h2 class="section-title">🎯 Career Roadmap</h2>
+    <p class="section-sub">Pick a path and follow the step-by-step plan</p>
+    <div class="chips" id="careerChips">
+      <button class="chip active" data-path="web">Web Developer</button>
+      <button class="chip" data-path="data">Data Scientist</button>
+      <button class="chip" data-path="cyber">Cyber Security</button>
+    </div>
+    <div class="roadmap" id="roadmap"></div>
+  </section>
+
+  <!-- ================= AI ASSISTANT (SIMULATED) ================= -->
+  <section id="assistant" class="section">
+    <h2 class="section-title">🤖 EduBot – AI Study & Career Assistant</h2>
+    <p class="section-sub">Frontend simulation — ask about exams, notes, placements or career</p>
+    <div class="chat-window card">
+      <div class="chat-header">
+        <span class="bot-avatar">🤖</span>
+        <div><b>EduBot</b><small>Online • Simulated AI</small></div>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="msg bot">Hello Aman! 👋 I'm EduBot. Ask me things like <i>"DBMS ke notes kahan hain?"</i>, <i>"placement kaise prepare karun?"</i> or <i>"web developer roadmap"</i>.</div>
+      </div>
+      <div class="chat-suggests">
+        <button onclick="sendQuick('Show DBMS notes')">DBMS notes</button>
+        <button onclick="sendQuick('How to prepare for placements?')">Placement prep</button>
+        <button onclick="sendQuick('Web developer roadmap')">Roadmap</button>
+        <button onclick="sendQuick('Upcoming events')">Events</button>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatText" placeholder="Type your question..." onkeypress="if(event.key==='Enter') sendChat()">
+        <button onclick="sendChat()">➤</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-brand">🎓 Edu<span>Sphere</span></div>
+    <p>Smart Campus Learning & Career Portal — Topic 180 prototype</p>
+    <p class="muted">Made with HTML, CSS & JavaScript • All data is sample data</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
